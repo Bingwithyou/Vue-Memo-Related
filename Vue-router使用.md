@@ -43,7 +43,7 @@ const router = new VueRouter({
 
 使用`<router-view>`标签指定
 
-## 指定路由组件存放位置，以区分一般组件与路由组件：
+### 指定路由组件存放位置，以区分一般组件与路由组件：
 
 在`src`目录下新建`pages`文件夹，新建路由组件：`Home.vue`，同时在`router/index.js`中也要修改引入：
 ```js
@@ -52,7 +52,7 @@ import Home from '../pages/Home'
 
 
 
-## 路由切换原理：
+### 路由切换原理：
 
 路由组件页面切换时，通过不断挂载与销毁展示（通过`mounted`与`beforeDestory`测试），可以通过配置使组件不做销毁处理。
 
