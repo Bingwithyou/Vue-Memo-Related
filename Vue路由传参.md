@@ -55,3 +55,28 @@ $route.params.id
 $route.params.title
 ```
 >路由携带params参数时，若使用to的对象写法，则不能使用path配置项，必须使用name配置
+---
+### props配置传参
+#### 第一种写法：
+```js
+// 值为对象，该对象种所有的key-value都会以props形式传递给Detail组件
+// children:[] 中添加
+props: {a:1, b:'hola'}
+```
+#### 第二种写法：
+```js
+// 布尔值为真，则把路由组件收到的所有params参数，以props形式传递给Detail组件
+props:true
+```
+#### 第三种写法：
+```js
+// 可利用$route获得query的参数
+props($route){
+  return {id:$route.query.id, title:$route.query.title}
+}
+
+// 可进一步简写
+props({query}){
+  return {id:query.id, title:query.title}
+}
+```
