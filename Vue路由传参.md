@@ -5,9 +5,10 @@
 ```js
 <router-link to="/home/message/detail?id=123&title=Hola!"></router-link>
 ```
->如果需要传递组件内的数据，应该先把to绑定：`:to`，然后用模板字符串与模板语法`${}`：
->
->:to="\`/home/message/detail?id=${m.id}&title=${m.title}\`"
+如果需要传递组件内的数据，应该先把to绑定：`:to`，然后用模板字符串\` \`与模板语法`${}`：
+```js
+:to="`/home/message/detail?id=${m.id}&title=${m.title}`"
+```
 
 ### to的对象写法：
 ```js
@@ -31,5 +32,26 @@ $route.query.title
 ## params参数
 在`router-link`标签中传递参数：
 ```js
-<router-link :to=""></router-link>
+// message组件向detail子组件传参
+<router-link :to="/home/message/detail/123/hola"></router-link>
 ```
+之后在`roter/index.js`的`path`中定义接收：
+```js
+// message的子路由
+children:[
+  {
+    name:'test',
+    path:'detail/:id/:title',
+    component:Detail,
+  }
+]
+```
+之后在子组件Detail身上存在`params: {id: "123", title: "hola"}`，其中id与title是在上方组件中定义的
+
+#### 使用params
+与`query`用法基本一致：
+```js
+$route.params.id
+$route.params.title
+```
+>路由携带params参数时，若使用to的对象写法，则不能使用path配置项，必须使用name配置
