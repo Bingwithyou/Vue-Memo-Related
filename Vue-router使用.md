@@ -83,3 +83,7 @@ export default new VueRouter({
     ]
 })
 ```
+#### 在跳转`<router-link>`中要写完整路径（一般写法）
+```js
+<router-link to="/home/news">
+```
