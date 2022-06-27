@@ -5,9 +5,9 @@
 ```js
 <router-link to="/home/message/detail?id=123&title=Hola!"></router-link>
 ```
->如果需要传递组件内的数据，应该先把to绑定：`:to`，然后用模板语法`${}`：
+>如果需要传递组件内的数据，应该先把to绑定：`:to`，然后用模板字符串与模板语法`${}`：
 >
->`:to="/home/message/detail?id=${m.id}&title=${m.title}"`
+>:to="\`/home/message/detail?id=${m.id}&title=${m.title}\`"
 
 ### to的对象写法：
 ```js
@@ -26,4 +26,10 @@
 ```js
 $route.query.id
 $route.query.title
+```
+
+## params参数
+在`router-link`标签中传递参数：
+```js
+<router-link :to=""></router-link>
 ```
