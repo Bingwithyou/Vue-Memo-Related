@@ -87,3 +87,19 @@ export default new VueRouter({
 ```js
 <router-link to="/home/news">
 ```
+
+### 命名路由的使用：
+在`router/index.js`中可以给各个路由定义`name`属性，在`to`跳转时方便书写：
+```js
+routes:[
+    {
+        name:'home',
+        path:'/home'
+        component:Home
+    }
+]
+```
+#### 直接通过`name`跳转，必须要绑定`:to`，且书写成对象形式：
+```js;
+<router-link :to="{name:'home'}">
+```
