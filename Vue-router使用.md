@@ -69,7 +69,7 @@ export default new VueRouter({
             path:'/home',
             component:Home,
             
-            // 二级路由，注意路径不带斜线`/`
+            // 二级路由，注意路径不带斜线'/'
             children:[
                 {
                     path:'news',
