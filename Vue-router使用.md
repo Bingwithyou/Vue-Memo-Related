@@ -59,3 +59,27 @@ import Home from '../pages/Home'
 1. 每个路由组件身上的`$route`不同，存储着自己的路由信息
 
 2. 每个路由组件身上的`$router`相同，整个应用只有一个`router`
+
+### 嵌套路由写法：
+```js
+export default new VueRouter({
+    routers:[
+        {
+            // 一级路由
+            path:'/home',
+            component:Home,
+            
+            // 二级路由，注意路径不带斜线`/`
+            children:[
+                {
+                    path:'news',
+                    component:News,
+                },
+                {
+                    ...
+                }
+            ]
+        }
+    ]
+})
+```
