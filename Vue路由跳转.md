@@ -23,3 +23,4 @@ $.route.go(-1)
 </keep-alive>
 
 ```
+### [路由生命周期钩子函数](https://github.com/Octopustraveler/Vue-Memo-Related/blob/main/Vue%E8%B7%AF%E7%94%B1%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90.md)
