@@ -19,3 +19,19 @@ export default router
 >to 代表去哪，from代表从哪来
 
 >需要修改默认暴露的路由组件，定义一个router常量接收，暴露放在beforeEach下方
+
+---
+
+## 可给需要权限校验的路由组件指定一个标记
+```js
+routes:[
+    name:'home',
+    path:'/home',
+    component:'Home',
+    // 路由组件中通过meta自定义一些属性
+    meta:{isAuth:false},
+]
+
+// 逻辑判断时直接访问标记判断是否需要校验
+if(to.meta.isAuth){...}
+```
