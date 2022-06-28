@@ -50,7 +50,7 @@ const router = new VueRouter({
 import Home from '../pages/Home'
 ```
 
-
+---
 
 ### 路由切换原理：
 
@@ -102,4 +102,15 @@ routes:[
 #### 直接通过`name`跳转，必须要绑定`:to`，且书写成对象形式：
 ```js;
 <router-link :to="{name:'home'}">
+```
+---
+### 路由两种工作模式
+#### push (defalut)
+即带有浏览历史记录的模式
+
+#### replace
+没有历史记录的模式，替换当前记录。
+开启方法：
+```js
+<router-link replace>
 ```
