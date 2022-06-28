@@ -13,6 +13,13 @@ $.router.back()
 $.route.go(2)
 $.route.go(-1)
 ```
-有局限性，不能满足部分使用场景
 
-### 
+### 路由切换组件时，会默认销毁之前的组件
+利用`<keep-alive>`标签包裹`<roter-view>`可以使组件保持挂载，达到缓存目的。
+```js
+// 通过include指定缓存哪个组件（填写组件名），不指定则默认全部缓存
+<keep-alive include="???">
+  <router-view></router-view>
+</keep-alive>
+
+```
