@@ -7,8 +7,15 @@
     import VueRouter from 'vue-router'
     Vue.use(VueRouter)  
 
-    //引入下方建好的路由，一般只需要一个路由就足够  
+    // 引入下方建好的路由，一般只需要一个路由就足够  
     import router from ./router'
+
+    // 在Vue实例中引入，与上方 import 中的 router 名字要一致，这里简写了：router: router
+    new Vue({
+      router,
+      render: (h) => h(App),
+    }).$mount("#app");
+
 ```
 ## 新建路由：
 在`src`目录下新建`router`文件夹，并新建`index.js`文件，写入如下代码（home路由组件为例）：
