@@ -1,2 +1,2 @@
 # Vue-Memo-Related
-Personal memorandum of Vue learning, writing in Chinese
+Personal memorandum of Vue learning, CN
