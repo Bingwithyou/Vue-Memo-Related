@@ -57,4 +57,5 @@
   </HelloWorld>
 </template>
 ```
+>scope="slotProps"  or  slot-scope="slotProps"
 >必须要多包裹一层`template`，`slotProps`可以自己定义名字，之后通过该名字访问数据
