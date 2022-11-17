@@ -105,7 +105,7 @@ const mutations = {
 >在`mutations`中可以直接操作数据，业务逻辑等应该写在`actions`里。
 
 
-#### store还可以定义一个getters方法（别忘记在export中添加）：
+#### 当state中的数据需要经过加工后再使用时，可以使用getters加工（别忘记在 export default 中添加getters）：
 
 ```js
 // store/index.js中定义:
