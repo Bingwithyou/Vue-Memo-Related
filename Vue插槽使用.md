@@ -51,10 +51,10 @@
 ```js
 <template>
   <HelloWorld>
-    <template v-slot:test="slotProps">
+    <template slot-scope="slotProps">
       {{ slotProps.??? }}
     </template>
   </HelloWorld>
 </template>
 ```
->要多包裹一层`template`，`slotProps`可以自己定义名字，之后通过该名字访问数据
+>必须要多包裹一层`template`，`slotProps`可以自己定义名字，之后通过该名字访问数据
