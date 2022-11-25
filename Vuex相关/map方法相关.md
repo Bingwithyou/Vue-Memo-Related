@@ -14,7 +14,7 @@ school(){
 ```js
 import {mapState} from 'vuex'
 
-// 借助mapState生成计算属性，从state中读取数据（当函数名与数据名一致时，可以写成数组形式：...mapState['a', 'b', 'c']）
+// 借助mapState生成计算属性，从state中读取数据，当函数名与数据名一致时，可以写成数组形式：...mapState(['a', 'b', 'c'])
 
 computed: {
     // 等效上边的举例
@@ -36,7 +36,23 @@ computer: {
     return this.$store.getters.getSum
   }
   // 等效于
-  ...mapGetters{["getSum"]}
+  ...mapGetters(["getSum"])
 }
 ```
-##
+## mapActions方法
+```js
+methods:{
+  ...mapActions({})
+}
+```
+## mapMutations方法
+> mapActions 与 mapMutations 使用时，若需要传递参数：在模板中绑定事件时传递好参数，否则参数是事件对象
+> 因为默认生成的模板为：
+```js
+eventName1(value){
+  this.$store.dispatch('stateHandle-1',value)
+}
+eventName2(value){
+  this.$store.commit('stateHandle-2',value)
+}
+```
