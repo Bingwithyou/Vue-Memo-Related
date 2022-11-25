@@ -4,7 +4,7 @@
 
 
 
-可以使用`mapState`来自动生成调用，先在组件中引入`mapState`：
+可以使用`mapState`来自动生成调用，先在**组件(VC)**中引入`mapState`：
 
 ```js
 import {mapState} from 'vuex'
