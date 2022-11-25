@@ -44,7 +44,7 @@ export default new Vuex.Store({
 
 2. 使用`map`相关方法时，指定模块
 
-3. 以`mapState`为例：`...mapState('firstFcuntion', ({ ... }))`
+3. 以`mapState`为例：`...mapState('firstFcuntion', [ 'a','b','c' ])`
 
 
 #### 提交修改commit时需要注意，不再是简单的添加模块名，而是以斜线`/`分割：
