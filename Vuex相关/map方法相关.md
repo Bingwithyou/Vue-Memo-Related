@@ -39,15 +39,14 @@ computer: {
   ...mapGetters(["getSum"])
 }
 ```
-## mapActions方法
+## mapActions，mapMutations方法与上边基本相同
 ```js
 methods:{
-  ...mapActions({})
+  ...mapActions({}),
+  ...mapMutations({})
 }
 ```
-## mapMutations方法
-> mapActions 与 mapMutations 使用时，若需要传递参数：在模板中绑定事件时传递好参数，否则参数是事件对象
-> 因为默认生成的模板为：
+## mapActions 与 mapMutations 使用时，若需要传递参数：在模板中绑定事件时传递好参数，否则参数是事件对象，因为默认生成的模板为：
 ```js
 eventName1(value){
   this.$store.dispatch('stateHandle-1',value)
