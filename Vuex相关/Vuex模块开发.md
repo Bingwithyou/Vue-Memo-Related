@@ -38,14 +38,18 @@ export default new Vuex.Store({
 
 ### 用到map相关方法时：
 
-1. 在`store/index.js`中，在模块内添加：`namespaced: true`
+要在`store/index.js`中，在模块内添加：`namespaced: true`，不然报错
 
+使用`map`相关方法时指定模块：
+```js
+...mapState('firstFcuntion', [ 'a','b','c' ])
+```
+`mapActions`和`mapMutations`写法：
+```js
+...mapActions('funName',{evet1,event2})
 
-
-2. 使用`map`相关方法时，指定模块
-
-3. 以`mapState`为例：`...mapState('firstFcuntion', [ 'a','b','c' ])`
-
+...mapMutations('funName',{evet1,event2})
+```
 
 #### 提交修改commit时需要注意，不再是简单的添加模块名，而是以斜线`/`分割：
 
@@ -55,7 +59,11 @@ this.$store.commit('firstFunction/MUTATIONS_NAME', value)
 
 // 其中dispatch的用法同上。
 ```
-
+Map写法：
+```js
+...mapGetters('eventName',['handleName']),
+...mapMutations('eventName1',{'aaa'})
+```
 #### 使用getters时注意：
 ```js
 // computed
