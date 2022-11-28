@@ -6,3 +6,10 @@
   <router-view></router-view>
 </keep-alive>
 ```
+### 当需要缓存多个页面时：
+```js
+// include 写为数组形式，下边代表缓存 aa bb cc 三个路由组件
+<keep-alive include="['aa','bb','cc']">
+  <router-view></router-view>
+</keep-alive>
+```
