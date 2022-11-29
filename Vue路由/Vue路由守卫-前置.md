@@ -14,11 +14,11 @@ router.beforeEache((to, from, next) => {
       next()
     }
 })
+// 全局前置路由守卫 --- 初始化、每次路由切换之前被调用
 export default router
 ```
->to 代表去哪，from代表从哪来
-
->需要修改默认暴露的路由组件，定义一个router常量接收，暴露放在beforeEach下方
+>to 代表去哪，from 代表从哪来
+>不再默认暴露路由，单独写为 export default router
 
 ---
 
