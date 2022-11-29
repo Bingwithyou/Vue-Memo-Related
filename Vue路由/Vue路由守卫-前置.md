@@ -35,4 +35,4 @@ routes:[
 // 逻辑判断时直接访问标记判断是否需要校验
 if(to.meta.isAuth){...}
 ```
-[后置路由守卫]([https://markdown.com.cn](https://github.com/Octopustraveler/Vue-Memo-Related/blob/main/Vue%E8%B7%AF%E7%94%B1/Vue%E8%B7%AF%E7%94%B1%E5%AE%88%E5%8D%AB-%E5%90%8E%E7%BD%AE.md))
+[后置路由守卫]([https://markdown.com.cn](https://github.com/Octopustraveler/Vue-Memo-Related/blob/main/Vue%E8%B7%AF%E7%94%B1/Vue%E8%B7%AF%E7%94%B1%E5%AE%88%E5%8D%AB-%E5%90%8E%E7%BD%AE.md)
