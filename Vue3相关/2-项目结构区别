@@ -1,0 +1,22 @@
+### 1.引入不再是 Vue 构造函数，换成一个名为 createApp 的工厂函数
+```js
+// 新的写法
+import {createApp} from 'vue'
+import App from './App.vue'
+
+createApp(app).mount('#app')
+
+// Vue2 中的写法
+new Vue({
+  render: (h) => h(App),
+}).$mount("#app");
+```
+>Vue3 中的 app 更“轻”（app身上少了一些方法）
+### 2.可以没有根标签
+```js
+// 不需要用 div 包裹最外层
+<template>
+  <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Welcome to Your Vue.js App" />
+</template>
+```
