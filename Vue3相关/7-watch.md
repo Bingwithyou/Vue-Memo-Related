@@ -1,7 +1,4 @@
- 
-7-watch
-7-watch
-### Vue2中的 watch 监听写法：
+ ### Vue2中的 watch 监听写法：
 ```js
 export default {
   watch:{
