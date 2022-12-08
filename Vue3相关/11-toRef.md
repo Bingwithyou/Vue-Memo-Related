@@ -7,7 +7,8 @@
  - 语法：`toRefs(person)`
 ### 使用
 ```js
-import {reactive} from 'vue'
+// 需要引入 toRef
+import {reactive, toRef, toRefs} from 'vue'
 export default {
   setup(){
 	let person = reactive({
