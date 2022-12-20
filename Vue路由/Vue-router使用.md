@@ -31,8 +31,8 @@ import Home from '../components/Home'
 const router = new VueRouter({
     routers: [
         {
-            path'/home',
-            component'/Home',
+            path: '/home',
+            component: '/Home',
         },
     ]
 })
