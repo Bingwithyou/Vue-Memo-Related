@@ -4,9 +4,6 @@
 
 ## 在main.js中引入:
 ```js
-    import VueRouter from 'vue-router'
-    Vue.use(VueRouter)  
-
     // 引入下方建好的路由，一般只需要一个路由就足够  
     import router from ./router'
 
@@ -15,14 +12,15 @@
       router,
       render: (h) => h(App),
     }).$mount("#app");
-
 ```
-## 新建路由：
+## 新建/配置 路由：
 在`src`目录下新建`router`文件夹，并新建`index.js`文件，写入如下代码（home路由组件为例）：
 
 ```js
-//引入路由
+//引入路由（需要先引入vue）
+import Vue from 'vue'
 import VueRouter from 'vue-router'
+Vue.use(VueRouter);
 
 //引入组件
 import Home from '../components/Home'
