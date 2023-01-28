@@ -13,7 +13,7 @@ setup(){
   person.fullName = computed(()=>{
     return person.firstName + person.lastName
   })
-  return {perosn}
+  return {person}
 }
 ```
 #### 完整写法（考虑读写）
