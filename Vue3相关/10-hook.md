@@ -20,11 +20,11 @@ export default funciton (){
   }
   // 添加鼠标监听事件
   onMounted(() => {
-	windows.addEventListener('click', getPoint)
+	window.addEventListener('click', getPoint)
   })
   // 解绑事件
   onBeforeUnmount(() => {
-	windows.removeEventListener('click',getPoint)
+	window.removeEventListener('click',getPoint)
   })
   // 返回值
   return Point
