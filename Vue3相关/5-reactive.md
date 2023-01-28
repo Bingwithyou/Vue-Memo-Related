@@ -12,6 +12,7 @@ setup(){
 			hb1:"typing code"
 		}
 	})
+	return person
 }
 // 调用时，可以直接 对象名.值 获取数据，省略了 .value
 function changeInfo(){
@@ -20,7 +21,5 @@ function changeInfo(){
 	// 可以自动监测深层数据变动
 	person.hobby.hb1 = "gaming"
 }
-
-return person
 ```
 >内部基于 ES6的 Proxy 实现，通过代理对象操作源对象内部数据进行操作。
