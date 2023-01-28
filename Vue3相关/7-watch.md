@@ -52,7 +52,7 @@ watch(sum, (newValue, oldValue) => {
 ```
 >情况二：监视多个响应式数据
 ```js
-watch([sum, msg], (newValue, oldValue) => {
+watch([sum, msg], ([newName, newNums], [oldName, oldNums]) => {
       console.log('sum or msg changed:', newValue, oldValue)
 }, {immediate: true})
 // 查看控制台会发现，多个数据会出现在一个数组里：
