@@ -10,6 +10,7 @@ setup(){
     lastName: 'Morgan'
   })
   // 当更改计算属性值时，会警告：Write operation failed: computed value is read only
+  // 回调函数必须return，结果就是计算的结果。如果计算属性依赖的数据发生变化，那么会重新计算
   person.fullName = computed(()=>{
     return person.firstName + person.lastName
   })
@@ -20,9 +21,11 @@ setup(){
 ```js
 person.fullName = computed({
   get(){
+    // 如果读取计算属性的值，默认调用get方法
     return person.firstName +' '+ person.lastName
   },
   set(value){
+    // 如果要想修改计算属性的值，默认调用set方法
     let nameArr = value.split(' ')
     person.fristName = nameArr[0]
     person.lastName = nameArr[1]
